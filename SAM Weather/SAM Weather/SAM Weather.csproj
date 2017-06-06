@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A49BBEC-6158-455A-994E-01801ABD3B4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SAM_Weather</RootNamespace>
+    <AssemblyName>SAM Weather</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Weather.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weather.Designer.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Weather.resx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalculatorWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloudy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Commands-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Commands-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ControllerAct-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitFullScreenC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitFullScreenN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foggy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullscreenC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullscreenN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GamePad-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GamePad-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GamepadWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gift-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gift-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GM-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GM-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyScrn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JKeyboard2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnowledgeBaseC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnowledgeBaseN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListenC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListenN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocMap-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoWP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailerWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailReaderWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microphone-iconActC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microphone-iconActN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microphone-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microphone-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft-Word-2013-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MusicC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MusicN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotificationsWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notify-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notify-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PatchC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PatcherWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PatchN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pbooks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pfood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PGift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plocation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pmovies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pmusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preferences-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreferencesWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreviousBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Psports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ptv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rainy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReaderWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadMail-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadMail-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReadN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reminder-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reminder-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReminderWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SDC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SDN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingsAWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingsWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SLC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SLN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUF9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewUL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewULF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNewULS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speak-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speak-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SRN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sunny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sunrise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thunder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Univ-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallpaperL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WeatherBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WeatherWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W-iconC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W-iconN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WPrimary.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
